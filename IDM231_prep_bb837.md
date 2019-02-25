@@ -81,7 +81,7 @@ if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayO
   -Text: WRITE
 
 - **Scorpio** (Scorpion)
-  -Traits: Passionate< Driven, Emotional
+  -Traits: Passionate, Driven, Emotional
   -Sound Effects: clickity clack or hissing
   -Compatability: Cancer, Virgo, **Capricorn**, Pisces
   -Anti-compatability: Leo, Aquarius
