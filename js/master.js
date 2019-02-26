@@ -181,7 +181,6 @@ if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whi
 }
 
 //    CAROUSEL
-
 var carousel = document.querySelector('.carousel');
 var cellCount = 12;
 var selectedIndex = 0;
@@ -195,10 +194,15 @@ var prevButton = document.querySelector('.previous-button');
 prevButton.addEventListener( 'click', function() {
   selectedIndex--;
   rotateCarousel();
+  console.log(selectedIndex);
 });
 
 var nextButton = document.querySelector('.next-button');
 nextButton.addEventListener( 'click', function() {
   selectedIndex++;
   rotateCarousel();
+  // console.log(selectedIndex);
 });
+
+// if selectedIndex = 1-12 then apply this code
+// add elements   call from object name and date
