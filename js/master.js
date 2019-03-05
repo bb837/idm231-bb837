@@ -120,20 +120,64 @@ const Pis = {
   description: "Understanding Aquarius traits can help you coexist in harmony with this zodiac sign, who craves casual connections but can sometimes be emotionally detached. An Aquarius has the fierce need for rebellion. An Aquarius has a strong desire for freedom, but they also love to be surrounded by their vast network of friends. They are passionate advocates for their cutting edge ideas, but can sometimes come off as aloof. It takes a lot to hold an Aquarius’ attention span—though but when they find their obsessions they go in all the way! Aquarius is the sign of the trendsetter and trailblazer. As the zodiac’s eleventh sign, Aquarius loves creative collaborations and synergistic connections. Positive Aquarius astrology traits include communication, originality, open-mindedness, fairness, logical and inviting. They’re not afraid to speak up for what they believe. Aquarius becomes upset when they feel wronged in some way or when a friend or loved one has been hurt or offended. This friendship-focused sign has no tolerance for injustice!",
 }
 
+
+
 const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
+
+
+
 
 //     INFO     ////////////////////////////////////////////////////////
 
     // CAROUSEL ////////////////////////////////////////////////////////
 
+    var carousel = document.querySelector('.carousel');
+    var cellCount = 12;
+    var selectedIndex = 0;
+    var selectedIndexNormal = 0; 
+    
+    function rotateCarousel() {
+      var angle = selectedIndex / cellCount * -360;
+      carousel.style.transform = 'translateZ(-288px) rotateY(' + angle + 'deg)';
+    
+      // console.log(angle);
+    }
+    
+    var prevButton = document.querySelector('.previous-button');
+    prevButton.addEventListener( 'click', function() {
+      selectedIndex--;
+      selectedIndexNormal = selectedIndex%12;
+      if(selectedIndexNormal < 0) {
+        selectedIndexNormal += 12; 
+      }
+      rotateCarousel();
+      // console.log(selectedIndex);
+      console.log(selectedIndexNormal);
+    });
+    
+    var nextButton = document.querySelector('.next-button');
+    nextButton.addEventListener( 'click', function() {
+      selectedIndex++;
+      selectedIndexNormal = selectedIndex%12;
+      if(selectedIndexNormal < 0) {
+        selectedIndexNormal += 12; 
+      }
+      rotateCarousel();
+      // console.log(selectedIndex);
+      console.log(selectedIndexNormal);
+    });
+
 function OpenNav() {
-  document.getElementById('selected_info').style.height = '30vh';
+  document.getElementById('selected_info').style.height = '50vh';
   selectedIndexNormal
 }
 
 // document.getElementById('submit_car').addEventListener("click",OpenNav, false);
 
-  // FORM BOI  /////////////////////////////////////////////////////////
+ 
+
+
+// FORM   /////////////////////////////////////////////////////////
 
 var submitBtn = document.getElementById('submit');
 
@@ -156,6 +200,10 @@ var whichDayOfMonth = document.getElementById('birth_day').value; // get number 
   document.getElementById('zodiac_date').innerText = getSign[selectedIndexNormal].date;
   document.getElementById('vague_fru_text').innerText = getSign[selectedIndexNormal].description;
 })
+
+
+
+
 
 //     ZODIAC DATES    ///////////////////////////////////////////////////////
 
@@ -192,6 +240,9 @@ if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayO
     AstroSign = "Aqu";
   }
 
+
+  //   RESTRICTIONs   /////////////////////////////////////////////////////////////////////////////
+
 if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whichMonth == 8||
   whichMonth == 10|| whichMonth == 12) && (whichDayOfMonth < 1 || whichDayOfMonth > 31)) {
 
@@ -208,55 +259,34 @@ if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whi
         AstroSign = 'error';
   }
 
-  if (AstroSign = 'error') {
-    document.getElementsByClassName('data_entry').appendChild(errorMessage).classList.add('error');
-  }
+  // if (AstroSign = 'error') {
+  //   document.getElementsByClassName('data_entry').appendChild(errorMessage).classList.add('error');
+  // }
 
   console.log(AstroSign);
 
   return AstroSign;
 }
 
-//    CAROUSEL
-var carousel = document.querySelector('.carousel');
-var cellCount = 12;
-var selectedIndex = 0;
-var selectedIndexNormal = 0; 
 
-function rotateCarousel() {
-  var angle = selectedIndex / cellCount * -360;
-  carousel.style.transform = 'translateZ(-288px) rotateY(' + angle + 'deg)';
-
-  // console.log(angle);
-}
-
-var prevButton = document.querySelector('.previous-button');
-prevButton.addEventListener( 'click', function() {
-  selectedIndex--;
-  selectedIndexNormal = selectedIndex%12;
-  if(selectedIndexNormal < 0) {
-    selectedIndexNormal += 12; 
-  }
-  rotateCarousel();
-  // console.log(selectedIndex);
-  console.log(selectedIndexNormal);
-});
-
-var nextButton = document.querySelector('.next-button');
-nextButton.addEventListener( 'click', function() {
-  selectedIndex++;
-  selectedIndexNormal = selectedIndex%12;
-  if(selectedIndexNormal < 0) {
-    selectedIndexNormal += 12; 
-  }
-  rotateCarousel();
-  // console.log(selectedIndex);
-  console.log(selectedIndexNormal);
-});
-
-// MAKE ERROR SIGN (SEE IF ERROR IS ENOUGH)
+// FIX ERROR SIGN (SEE IF ERROR IS ENOUGH)
 // ADD EVENT LISTENERS TO THE IMGS IN CAROSEL TO SHOW FRU FRU TEXT ON CLICK
 // FIGURE OUT HOW TO SHOW COMPATABILITY
 //HAVE A BUTTON CREATE UNDER FRU FRU TEXT TO REDIRECT ANGLE/CELL OF CAROUSEL
 // AND AUTOMATICALLY SHOW THE FRU FRU TEXT OF THE MATCH 
 //ADD RESTART BUTTON TO START OVER
+
+
+
+
+// const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
+
+// function Compatability() {
+
+//   if getSign[0] 
+// }
+
+for (let i=0; i < getSign.length; i++) {
+  getSign.addEventListener('click', //turn carousel to sign//
+  ,OpenNav)
+};
