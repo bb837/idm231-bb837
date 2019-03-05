@@ -1,28 +1,22 @@
 html {
     font-size: 100%;
+    color: white;
 }
 
-/*     content       */
-
-.header_text, .form {
-    color: #ffffff;
-    text-align: center;
-    z-index: 50;
-}
-
-.form {
-    margin-top: 3rem;
+*,*::before, *::after {
+    box-sizing: border-box;
 }
 
 /*     CAROSEL       */
 .scene {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 100px auto;
-    perspective: 1000px;
+    width: 18.75rem;
+    height: 18.75rem;
+    margin: 6.25rem auto;
+    perspective: 62.5rem;
     z-index: 30;
+    grid-area: carousel;
   }
   
   .carousel {
@@ -39,34 +33,12 @@ html {
     background-image: radial-gradient(ellipse at center, rgba(0,0,0,.8) 0%, 
       rgba(0,0,0,.8) 30%, rgba(255,255,255,0) 70%);
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 48px;
-    top: 48px;
-    /*border: 2px solid black;*/
-    line-height: 116px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    text-align: center;
+    width: 12.5rem;
+    height: 12.5rem;
+    left: 3rem;
+    top: 3rem;
     z-index: 30;
   }
-  
- /* background-image: radial-gradient(circle hsla( 0, 0%, 0%, 0.1) 50%, hsla(  0, 0%, 0%, 0.0));*/
-  /* .carousel__cell:nth-child(12n+1) { 
-      background-image: radial-gradient(ellipse at center, rgba(0,0,0,.8) 0%, rgba(0,0,0,.8) 35%, rgba(255,255,255,0) 85%);
- }
-  .carousel__cell:nth-child(12n+2) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+3) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+4) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+5) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+6) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+7) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+8) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+9) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+10) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+11) { background: hsla(  0, 0%, 0%, 0.1); }
-  .carousel__cell:nth-child(12n+0) { background: hsla(  0, 0%, 0%, 0.1); } */
   
   .carousel__cell:nth-child(1) { transform: rotateY(0deg) translateZ(560px); }
   .carousel__cell:nth-child(2) { transform: rotateY(30deg) translateZ(560px); }
@@ -81,48 +53,8 @@ html {
   .carousel__cell:nth-child(11) { transform: rotateY(300deg) translateZ(560px); }
   .carousel__cell:nth-child(12) { transform: rotateY(330deg) translateZ(560px); }
 
-  #buttons {
-      text-align: center;
-  }
-
-  .previous-button, .next-button {
-      background-color: blue;
-      border: 0;
-      border-radius: .5rem;
-      color: white;
-      font-size: 1rem;
-      height: 3rem;
-      padding: .75rem .75rem;
-      text-align: center;
-      width: 5rem;
-      z-index: 30;
-  }
-
   /*      BG      */
-  * {
-    margin: 0;
-    padding: 0;
-}
-header {
-    background-color:rgba(33, 33, 33, 0.9);
-    color:#ffffff;
-    display:block;
-    font: 14px/1.3 Arial, sans-serif;
-    height:50px;
-    position:relative;
-    z-index:5;
-}
-h2{
-    margin-top: 30px;
-    text-align: center;
-}
-header h2{
-    font-size: 22px;
-    margin: 0 auto;
-    padding: 10px 0;
-    width: 80%;
-    text-align: center;
-}
+
 header a, a:visited {
     text-decoration:none;
     color:#fcfcfc;
@@ -130,36 +62,36 @@ header a, a:visited {
 
 @keyframes move-twink-back {
     from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+    to {background-position:-625rem 312.5rem;}
 }
 @-webkit-keyframes move-twink-back {
     from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+    to {background-position:-625rem 312.5rem;}
 }
 @-moz-keyframes move-twink-back {
     from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+    to {background-position:-625rem 312.5rem;}
 }
 @-ms-keyframes move-twink-back {
     from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+    to {background-position:-625rem 312.5rem;}
 }
 
 @keyframes move-clouds-back {
     from {background-position:0 0;}
-    to {background-position:10000px 0;}
+    to {background-position:625rem 0;}
 }
 @-webkit-keyframes move-clouds-back {
     from {background-position:0 0;}
-    to {background-position:10000px 0;}
+    to {background-position:625rem 0;}
 }
 @-moz-keyframes move-clouds-back {
     from {background-position:0 0;}
-    to {background-position:10000px 0;}
+    to {background-position:625rem 0;}
 }
 @-ms-keyframes move-clouds-back {
     from {background-position: 0;}
-    to {background-position:10000px 0;}
+    to {background-position:625rem 0;}
 }
 
 .stars, .twinkling, .clouds {
@@ -200,10 +132,102 @@ header a, a:visited {
   animation:move-clouds-back 200s linear infinite;
 }
 
+  /*     CONTENT       */
+
+
+  /*     HEADER        */
+header {
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 50;
+    margin: 1rem auto;
+    grid-area: header;
+}
+
+header h1 {
+/* font-family: ADD IN LATER; */
+font-size: 4rem;
+margin: 1rem auto;
+}
+
+h2{
+    font-size: 1.5rem;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    line-height: 1.75rem;
+}
+
+/*          BODY          */
+
+#body_grid {
+    display: grid;
+    grid-template-rows: 20vh 13vh auto 10vh 30vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'header header header header'
+    '. form form .'
+    'carousel carousel carousel carousel'
+    '. prev next .'
+    '. info info .';
+}
+
+/*      BUTTONS      */
+
+/*  FORM  */
+.data_entry {
+    display: grid;
+    position: relative;
+    height: 13vh;
+    grid-area: form;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+
+form {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#sel_month {
+    background-color: white;
+    z-index: 50;
+}
+
+#submit {
+    grid-column: 1 / 3;
+}
+
+.previous-button, .next-button {
+    background-color: blue;
+    border: 0;
+    border-radius: .5rem;
+    font-size: 1rem;
+    height: 3rem;
+    padding: .75rem .75rem;
+    text-align: center;
+    width: 5rem;
+    z-index: 30;
+    justify-self: center;
+}
+
+  .previous-button {
+grid-area: prev;
+}
+
+  .next-button {
+    grid-area: next;
+}
+
+#selected_info {
+    grid-area: info;
+}
+
 #submit_car {
     height: 5vh;
 }
 
-h1, h2, p {
+/* h1, h2, p {
     color: white;
-}
+} */
