@@ -162,6 +162,7 @@ var whichDayOfMonth = document.getElementById('birth_day').value; // get number 
 function getSignData (whichMonth, whichDayOfMonth) {
 
   var AstroSign = '';
+  var errorMessage = 'Invalid Date';
   console.log(whichMonth);
   console.log(whichDayOfMonth);
 
@@ -205,6 +206,10 @@ if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whi
   && (whichDayOfMonth < 1 || whichDayOfMonth > 29)) {
       
         AstroSign = 'error';
+  }
+
+  if (AstroSign = 'error') {
+    document.getElementsByClassName('data_entry').appendChild(errorMessage).classList.add('error');
   }
 
   console.log(AstroSign);
