@@ -122,9 +122,6 @@ const Pis = {
 
 const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
 
-
-
-
 //     INFO     ////////////////////////////////////////////////////////
 
     // CAROUSEL ////////////////////////////////////////////////////////
@@ -165,21 +162,29 @@ const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
       console.log(selectedIndexNormal);
     });
 
-    
- // FORM   /////////////////////////////////////////////////////////
-
+// FORM   /////////////////////////////////////////////////////////
  
  var myForm = document.getElementById('formsub');
 
-    myForm.addEventListener('submit',HandleForm);
+    myForm.addEventListener('submit', HandleForm);
     
+    function mayDay() {
+      // const errorMessage = getSignData(AstroSign === 'error');
+    //   const NoNomessage = document.createElement('p').classList.add('error');
+    //   const WhatEver = document.getElementById('formsub');
+
+    // function WhoCares() {
+    //   WhatEver.appendChild(NoNomessage);
+    // }
+      // WhatEver.appendChild(NoNomessage);
+      console.log('MAYDAY');
+    }
     
     function showInfo(selectedSign) {
       var selectedSign = selectedIndexNormal;
 
-      console.log(selectedSign);
+      console.log(selectedSign); //logging cell in the scene FIX
 
-    
       document.getElementById('selected_info').style.height = '50vh';
       document.getElementById('zodiac_name').innerText = getSign[selectedIndexNormal].name;
       document.getElementById('zodiac_date').innerText = getSign[selectedIndexNormal].date;
@@ -189,32 +194,29 @@ const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
     function HandleForm(event) {
       var whichMonth = document.getElementById('month').value; // get number value from 0-11
       var whichDayOfMonth = document.getElementById('birthday').value; // get number value from 1-31
+      // var AstroSign = getSignData(AstroSign); // logs cell #
       const selectedSign = getSignData(whichMonth, whichDayOfMonth);
       event.preventDefault();
+
+      // if (AstroSign === 'error') { 
+        mayDay();
+      // } else {
+      //   showInfo(selectedSign);
+      // }
+
       showInfo(selectedSign);
+      // mayDay();
 
       console.log(whichMonth);
       console.log(whichDayOfMonth);
     }
-    
-    
-// console.log(whichMonth);
-
-//   getSignData(whichMonth, whichDayOfMonth);
-//   selectedIndexNormal = eval(getSignData(whichMonth, whichDayOfMonth)).value;
-
-//   // console.log('click');
-
-//   OpenNav();
-
-// }
 
 //     ZODIAC DATES    ///////////////////////////////////////////////////////
 
 function getSignData (whichMonth, whichDayOfMonth) {
 
   var AstroSign = '';
-  var errorMessage = 'Invalid Date';
+
   // console.log(whichMonth);
   // console.log(whichDayOfMonth);
 
@@ -244,27 +246,26 @@ if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayO
     AstroSign = "Aqu";
   }
 
-
   //   RESTRICTIONs   /////////////////////////////////////////////////////////////////////////////
 
 if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whichMonth == 8||
   whichMonth == 10|| whichMonth == 12) && (whichDayOfMonth < 1 || whichDayOfMonth > 31)) {
 
-    AstroSign = 'error';
+    mayDay();
+    // AstroSign = 'error';
   
  } else if ((whichMonth == 9|| whichMonth == 4|| whichMonth == 6|| whichMonth == 11)
  && (whichDayOfMonth < 1 || whichDayOfMonth > 30)) {
 
-   AstroSign = 'error';
+  mayDay();
+  //  AstroSign = 'error';
       
   } else if  ((whichMonth == 2)
   && (whichDayOfMonth < 1 || whichDayOfMonth > 29)) {
       
-        AstroSign = 'error';
+    mayDay();
+        // AstroSign = 'error';
   }
-
-  // if (AstroSign = 'error') {
-  //   const helpME = document.getElementsByClassName('data_entry');
 
   //   console.log(helpME);
   //   // put a loop to do.... what....
@@ -273,30 +274,22 @@ if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whi
   //   // classList.add('error');
   // }
 
-  // console.log(AstroSign);
+  console.log(AstroSign);
 
   return AstroSign;
 }
 
-
 // FIX ERROR SIGN (SEE IF ERROR IS ENOUGH)
 // ADD EVENT LISTENERS TO THE IMGS IN CAROSEL TO SHOW FRU FRU TEXT ON CLICK
-// FIGURE OUT HOW TO SHOW COMPATABILITY
-//HAVE A BUTTON CREATE UNDER FRU FRU TEXT TO REDIRECT ANGLE/CELL OF CAROUSEL
-// AND AUTOMATICALLY SHOW THE FRU FRU TEXT OF THE MATCH 
 //ADD RESTART BUTTON TO START OVER
-
-
 
 
 // const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
 
+// FIGURE OUT HOW TO SHOW COMPATABILITY
+//HAVE A BUTTON CREATE UNDER FRU FRU TEXT TO REDIRECT ANGLE/CELL OF CAROUSEL
+// AND AUTOMATICALLY SHOW THE FRU FRU TEXT OF THE MATCH 
 // function Compatability() {
 
 //   if getSign[0] 
 // }
-
-// for (let i=0; i < getSign.length; i++) {
-//   getSign.addEventListener('click', //turn carousel to sign//
-//   ,OpenNav)
-// };
