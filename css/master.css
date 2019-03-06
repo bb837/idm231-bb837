@@ -232,7 +232,7 @@ form {
     justify-self: center;
 }
 
-#sel_month {
+#month {
     background-color: white;
     z-index: 50;
 }

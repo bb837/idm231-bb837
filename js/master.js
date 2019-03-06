@@ -120,8 +120,6 @@ const Pis = {
   description: "Understanding Aquarius traits can help you coexist in harmony with this zodiac sign, who craves casual connections but can sometimes be emotionally detached. An Aquarius has the fierce need for rebellion. An Aquarius has a strong desire for freedom, but they also love to be surrounded by their vast network of friends. They are passionate advocates for their cutting edge ideas, but can sometimes come off as aloof. It takes a lot to hold an Aquarius’ attention span—though but when they find their obsessions they go in all the way! Aquarius is the sign of the trendsetter and trailblazer. As the zodiac’s eleventh sign, Aquarius loves creative collaborations and synergistic connections. Positive Aquarius astrology traits include communication, originality, open-mindedness, fairness, logical and inviting. They’re not afraid to speak up for what they believe. Aquarius becomes upset when they feel wronged in some way or when a friend or loved one has been hurt or offended. This friendship-focused sign has no tolerance for injustice!",
 }
 
-
-
 const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
 
 
@@ -167,43 +165,49 @@ const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
       console.log(selectedIndexNormal);
     });
 
-function OpenNav() {
-  document.getElementById('selected_info').style.height = '50vh';
-  selectedIndexNormal
-}
-
-// document.getElementById('submit_car').addEventListener("click",OpenNav, false);
+    
+ // FORM   /////////////////////////////////////////////////////////
 
  
+ var myForm = document.getElementById('formsub');
 
+    myForm.addEventListener('submit',HandleForm);
+    
+    
+    function showInfo(selectedSign) {
+      var selectedSign = selectedIndexNormal;
 
-// FORM   /////////////////////////////////////////////////////////
+      console.log(selectedSign);
 
-var submitBtn = document.getElementById('submit');
+    
+      document.getElementById('selected_info').style.height = '50vh';
+      document.getElementById('zodiac_name').innerText = getSign[selectedIndexNormal].name;
+      document.getElementById('zodiac_date').innerText = getSign[selectedIndexNormal].date;
+      document.getElementById('vague_fru_text').innerText = getSign[selectedIndexNormal].description;
+    }
+  
+    function HandleForm(event) {
+      var whichMonth = document.getElementById('month').value; // get number value from 0-11
+      var whichDayOfMonth = document.getElementById('birthday').value; // get number value from 1-31
+      const selectedSign = getSignData(whichMonth, whichDayOfMonth);
+      event.preventDefault();
+      showInfo(selectedSign);
 
-// console.log(submitBtn);
-
-submitBtn.addEventListener('click', function() {
-  var whichMonth = document.getElementById('sel_month').value; // get the value attribute 
-
+      console.log(whichMonth);
+      console.log(whichDayOfMonth);
+    }
+    
+    
 // console.log(whichMonth);
 
-var whichDayOfMonth = document.getElementById('birth_day').value; // get number value from 1-31
-  getSignData(whichMonth, whichDayOfMonth);
-  selectedIndexNormal = eval(getSignData(whichMonth, whichDayOfMonth)).value;
+//   getSignData(whichMonth, whichDayOfMonth);
+//   selectedIndexNormal = eval(getSignData(whichMonth, whichDayOfMonth)).value;
 
-  // console.log('click');
+//   // console.log('click');
 
-  OpenNav();
+//   OpenNav();
 
-  document.getElementById('zodiac_name').innerText = getSign[selectedIndexNormal].name;
-  document.getElementById('zodiac_date').innerText = getSign[selectedIndexNormal].date;
-  document.getElementById('vague_fru_text').innerText = getSign[selectedIndexNormal].description;
-})
-
-
-
-
+// }
 
 //     ZODIAC DATES    ///////////////////////////////////////////////////////
 
@@ -211,8 +215,8 @@ function getSignData (whichMonth, whichDayOfMonth) {
 
   var AstroSign = '';
   var errorMessage = 'Invalid Date';
-  console.log(whichMonth);
-  console.log(whichDayOfMonth);
+  // console.log(whichMonth);
+  // console.log(whichDayOfMonth);
 
 if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     AstroSign = "Cap";
@@ -260,10 +264,16 @@ if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whi
   }
 
   // if (AstroSign = 'error') {
-  //   document.getElementsByClassName('data_entry').appendChild(errorMessage).classList.add('error');
+  //   const helpME = document.getElementsByClassName('data_entry');
+
+  //   console.log(helpME);
+  //   // put a loop to do.... what....
+  //   // for ()
+  //   // appendChild(errorMessage);
+  //   // classList.add('error');
   // }
 
-  console.log(AstroSign);
+  // console.log(AstroSign);
 
   return AstroSign;
 }
@@ -286,7 +296,7 @@ if ((whichMonth == 1|| whichMonth == 3|| whichMonth == 5|| whichMonth == 7|| whi
 //   if getSign[0] 
 // }
 
-for (let i=0; i < getSign.length; i++) {
-  getSign.addEventListener('click', //turn carousel to sign//
-  ,OpenNav)
-};
+// for (let i=0; i < getSign.length; i++) {
+//   getSign.addEventListener('click', //turn carousel to sign//
+//   ,OpenNav)
+// };
