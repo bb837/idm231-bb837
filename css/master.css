@@ -2,6 +2,22 @@ html {
     font-size: 100%;
 }
 
+/*      FONTS         */
+
+@font-face {
+    font-family: 'andersregular';
+    src: url('../fonts/anders-webfont.woff2') format('woff2'),
+         url('../fonts/anders-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'andersregular';
+    font-size: 3rem;
+    text-shadow: 0 0 .3125rem white;
+}
+
 /*     content       */
 
 .header_text, .form {
