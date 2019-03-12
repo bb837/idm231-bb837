@@ -8,14 +8,40 @@
     <link rel="stylesheet" href="css/master.css">
     <title>Zodiac Compatability</title>
 </head>
-<body>
-    <div class="header_text">
-        <h1 id="title">Zodiac Compatability</h1>
-        <h2>Pick your sign</h2>
+
+<header>
+    <h1 id="title">Zodiac Compatability</h1>
+    <h2>Enter Your Birthdate and See Your True Pairing</h2>
+</header>
+<body id="body_grid">
+    <div class="data_entry">
+            <form id="formsub">
+               <label for="month">Enter Birth Month</label>
+               <select name="month" id="month">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+               </select>
+               <label for="birthday">Enter Birth Day</label>
+               <input type="number" min="1" max="31" name="birthday" id="birthday">
+               <p class="error" >Invalid Date</p>
+                <input type="submit" value="Submit" id="submit">
+             </form>
+    
     </div>
-     <div class="scene">
-         <div class="carousel">
-             <div class="carousel__cell"><img src="img/aries_test_v03.png" alt="Aries"></div>
+    <div class="scene">
+        <h2>Pick your Sign</h2>
+        <div class="carousel">
+             <div class="carousel__cell"><img src="img/aries_test_v03.png" alt="Aries">  </div>
              <div class="carousel__cell"><img src="img/taurus_v01.png" alt="Taurus"></div>
              <div class="carousel__cell"><img src="img/gemini_v01.png" alt="Gemini"></div>
              <div class="carousel__cell"><img src="img/cancer_v01.png" alt="Cancer"></div>
@@ -29,26 +55,28 @@
              <div class="carousel__cell"><img src="img/pisces_v01.png" alt="Pisces"></div>
          </div>
      </div>       
-        <p id="buttons">
-            <button class="previous-button">Previous</button>
-            <button class="next-button">Next</button>
-          </p>
-    
-          <h2>Enter a Your Birthdate</h2>
-    <!--Some kind of page breaker img here-->
 
-    <div class="form">
-        <form action="">
-           <p>Enter Birthdate (MM/DD/YY)</p>
-           <input type="date" name="birthday" id="birthday">
-        </form>
+    <button class="previous-button">Previous</button>
+    <button class="next-button">Next</button>
+
+    <div id="selected_info">
+        <h1 id="zodiac_name"></h1>
+        <h2 id="zodiac_date"></h2>
+        <p id="vague_fru_text"></p>
+        <!-- <button id="compatability">Find Compatability</button> -->
+        <!-- <a href="index.html"><img id="refresh" src="img/refresh_white_192x192.png" alt="refresh"></a> -->
+        <!-- <input type="submit" value="Submit" id="submit_car"> -->
+    
+        <!-- This is the dynamically added elements -->
     </div>
 
+    <!-- <button class="restyle"><img id="refresh" src="img/refresh_white_192x192.png" alt="refresh"></button> -->
+ <footer>
+     <p>copyright here, i forgot the shortcut</p>
+ </footer>
 <div class="stars"></div>
 <div class="twinkling"></div>
-<div class="clouds"></div>
-
-<footer>copyright</footer>
+<!-- <div class="clouds"></div> -->
 </body>
 <script src="js/master.js"></script>
 </html>
