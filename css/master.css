@@ -164,8 +164,10 @@ h2 {
 }
 
 .error {
+    font-family: futura-pt-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     color: black;
-    font-size: 1rem;
     margin: .2rem auto;
 }
 
@@ -215,7 +217,7 @@ header h1 {
 #body_grid {
     display: grid;
     grid-template-rows: 22vh auto auto 10vh 30vh 5h;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 40vw 40vw 1fr;
     grid-template-areas: 
     'header header header header'
     '. form form .'
@@ -236,11 +238,17 @@ header h1 {
 }
 
 form {
-    width: 100%;
+    /* width: 70%; */
     margin: 1rem;
     padding: 1rem;
-    justify-self: center;
+    align-items: center;
     grid-area: 'form2';
+}
+
+#vague_fru_text {
+    font-family: futura-pt-condensed, sans-serif;
+    font-weight: 400;
+    font-style: normal;   
 }
 
 #formsub {
@@ -284,6 +292,15 @@ form {
     border: 3px solid white;
     font-family: 'andersregular';
     color: white;
+}
+
+.previous-button:hover, .next-button:hover, #submit:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    background: rgb(106,0,255);
+    background: linear-gradient(0deg, rgba(106,0,255,1) 0%, rgba(202,0,255,1) 66%);
 }
 
   .previous-button {

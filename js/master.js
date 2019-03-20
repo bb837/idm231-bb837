@@ -178,21 +178,21 @@ const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
     }
     
     function showInfo(selectedSign) {
-      var selectedSign = getSignData;
+      var selectedSign = eval(selectedSign);
 
       console.log(selectedSign); //logging cell in the scene FIX
 
       document.getElementById('selected_info').style.height = '50vh';
-      document.getElementById('zodiac_name').innerText = getSign[selectedIndexNormal].name;
-      document.getElementById('zodiac_date').innerText = getSign[selectedIndexNormal].date;
-      document.getElementById('vague_fru_text').innerText = getSign[selectedIndexNormal].description;
+      document.getElementById('zodiac_name').innerText = selectedSign.name;
+      document.getElementById('zodiac_date').innerText = selectedSign.date;
+      document.getElementById('vague_fru_text').innerText = selectedSign.description;
     }
   
     function HandleForm(event) {
       var whichMonth = document.getElementById('month').value; // get number value from 0-11
       var whichDayOfMonth = document.getElementById('birthday').value; // get number value from 1-31
       // var AstroSign = getSignData(AstroSign); // logs cell #  DOESNT WORK 
-      const selectedSign = getSignData(whichMonth, whichDayOfMonth);
+      const selectedSign = getSignData(whichMonth, whichDayOfMonth); 
       event.preventDefault();
 
       if (selectedSign === 'error') { 
@@ -203,6 +203,14 @@ const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
 
       console.log(whichMonth);
       console.log(whichDayOfMonth);
+
+      selectedIndex = getSign.indexOf(eval(selectedSign));
+      selectedIndexNormal = getSign.indexOf(eval(selectedSign));
+
+      console.log(selectedIndex);
+      console.log(selectedIndexNormal);
+
+      rotateCarousel();
     }
   };
 
@@ -212,8 +220,8 @@ function getSignData (whichMonth, whichDayOfMonth) {
 
   var AstroSign = '';
 
-  console.log(whichMonth);
-  console.log(whichDayOfMonth);
+  // console.log(whichMonth);
+  // console.log(whichDayOfMonth);
 
 if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     AstroSign = "Cap";
