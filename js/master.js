@@ -183,102 +183,177 @@ const getSign = [Ari,Tau,Gem,Can,Leo,Vir,Lib,Sco,Sag,Cap,Aqu,Pis];
    rotateCarousel();
  });
 
+ //
+function soundCheck() {
+  var soundAri = new Audio(Ari.sound);
+  soundAri.pause();
+  soundAri.currentTime = 0.0;
+
+  var soundTau = new Audio(Tau.sound);
+  soundTau.pause();
+  soundTau.currentTime = 0.0;
+
+  var soundGem = new Audio(Gem.sound);
+  soundGem.pause();
+  soundGem.currentTime = 0.0;
+  
+  var soundCan = new Audio(Can.sound);
+  soundCan.pause();
+  soundCan.currentTime = 0.0;
+  
+  var soundLeo = new Audio(Leo.sound);
+  soundLeo.pause();
+  soundLeo.currentTime = 0.0;
+  
+  var soundVir = new Audio(Vir.sound);
+  soundVir.pause();
+  soundVir.currentTime = 0.0;
+  
+  var soundLib = new Audio(Lib.sound);
+  soundLib.pause();
+  soundLib.currentTime = 0.0;
+  
+  var soundSco = new Audio(Sco.sound);
+  soundSco.pause();
+  soundSco.currentTime = 0.0;
+  
+  var soundSag = new Audio(Sag.sound);
+  soundSag.pause();
+  soundSag.currentTime = 0.0;
+  
+  var soundCap = new Audio(Cap.sound);
+  soundCap.pause();
+  soundCap.currentTime = 0.0;
+  
+  var soundAqu = new Audio(Aqu.sound);
+  soundAqu.pause();
+  soundAqu.currentTime = 0.0;
+  
+  var soundPis = new Audio(Pis.sound);
+  soundPis.pause();
+  soundPis.currentTime = 0.0;
+}
+
  // The following is the CAROUSEL USABILITY functionality + sound
  document.getElementById('ari').addEventListener('click', function(){
    showInfo(Ari);
    selectedIndex = getSign.indexOf(Ari);
    selectedIndexNormal = getSign.indexOf(Ari);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();
    var sound = new Audio(Ari.sound);
    sound.play();
+  }, false);
  
  document.getElementById('tau').addEventListener('click', function(){
    showInfo(Tau);
    selectedIndex = getSign.indexOf(Tau);
    selectedIndexNormal = getSign.indexOf(Tau);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();
    var sound = new Audio(Tau.sound);
-   sound.play();
+   sound.play();}, false);
+
  
  document.getElementById('gem').addEventListener('click', function(){
    showInfo(Gem);
    selectedIndex = getSign.indexOf(Gem);
    selectedIndexNormal = getSign.indexOf(Gem);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();  
    var sound = new Audio(Gem.sound);
-   sound.play();
+   sound.play();}, false);
+
  
  document.getElementById('can').addEventListener('click', function(){
    showInfo(Can);
    selectedIndex = getSign.indexOf(Can);
    selectedIndexNormal = getSign.indexOf(Can);
-   rotateCarousel();}, false);
+   rotateCarousel(); 
+   soundCheck();  
    var sound = new Audio(Can.sound);
-   sound.play();
+   sound.play();}, false);
+
  
  document.getElementById('leo').addEventListener('click', function(){
    showInfo(Leo);
    selectedIndex = getSign.indexOf(Leo);
    selectedIndexNormal = getSign.indexOf(Leo);
-   rotateCarousel();}, false);
+   rotateCarousel(); 
+   soundCheck();  
    var sound = new Audio(Leo.sound);
-   sound.play();
+   sound.play();}, false);
+
  
  document.getElementById('vir').addEventListener('click', function(){
    showInfo(Vir);
    selectedIndex = getSign.indexOf(Vir);
    selectedIndexNormal = getSign.indexOf(Vir);
-   rotateCarousel();}, false);
+   rotateCarousel(); 
+   soundCheck();
    var sound = new Audio(Vir.sound);
-   sound.play();
+   sound.play();}, false);
+
  
  document.getElementById('lib').addEventListener('click', function(){
    showInfo(Lib);
    selectedIndex = getSign.indexOf(Lib);
    selectedIndexNormal = getSign.indexOf(Lib);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();
    var sound = new Audio(Lib.sound);
-   sound.play();
+   sound.play();}, false);
+
          
  document.getElementById('sco').addEventListener('click', function(){
    showInfo(Sco);
    selectedIndex = getSign.indexOf(Sco);
    selectedIndexNormal = getSign.indexOf(Sco);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();
    var sound = new Audio(Sco.sound);
-   sound.play();
+   sound.play();}, false);
+
          
  document.getElementById('sag').addEventListener('click', function(){
    showInfo(Sag);
    selectedIndex = getSign.indexOf(Sag);
    selectedIndexNormal = getSign.indexOf(Sag);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();   
    var sound = new Audio(Sag.sound);
-   sound.play();
+   sound.play();}, false);
+
          
  document.getElementById('cap').addEventListener('click', function(){
    showInfo(Cap);
    selectedIndex = getSign.indexOf(Cap);
    selectedIndexNormal = getSign.indexOf(Cap);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();
    var sound = new Audio(Cap.sound);
-   sound.play();
+   sound.play();}, false);
+
          
  document.getElementById('aqu').addEventListener('click', function(){
    showInfo(Aqu);
    selectedIndex = getSign.indexOf(Aqu);
    selectedIndexNormal = getSign.indexOf(Aqu);
-   rotateCarousel();}, false);
+   rotateCarousel();
+   soundCheck();
    var sound = new Audio(Aqu.sound);
-   sound.play();
+   sound.play();}, false);
+
          
  document.getElementById('pis').addEventListener('click', function(){
    showInfo(Pis);
    selectedIndex = getSign.indexOf(Pis);
    selectedIndexNormal = getSign.indexOf(Pis);
-   rotateCarousel();}, false);
+   rotateCarousel();   
+   soundCheck();
    var sound = new Audio(Pis.sound);
-   sound.play();
+   sound.play();}, false);
+
 
 //     ZODIAC ALGORITHM    ///////////////////////////////////////////////////////
 
