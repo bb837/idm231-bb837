@@ -17,7 +17,7 @@
 <body id="body_grid">
     <div class="data_entry">
             <form id="formsub">
-               <label for="month">Enter Birth Month</label>
+               <label class="label_month" for="month">Enter Birth Month</label>
                <select name="month" id="month">
                     <option value="1">January</option>
                     <option value="2">February</option>
@@ -32,28 +32,28 @@
                     <option value="11">November</option>
                     <option value="12">December</option>
                </select>
-               <label for="birthday">Enter Birth Day</label>
+               <label class="label_day" for="birthday">Enter Birth Day</label>
                <input type="number" min="1" max="31" name="birthday" id="birthday">
-               <p id="errorMe" class="error">Invalid Date</p>
+               <p id="errorMe" class="error">Please enter a valid date within the selected month.</p>
                 <input type="submit" value="Submit" id="submit">
              </form>
     
     </div>
     <div class="scene">
-        <h2>Pick your Sign</h2>
+        <h2> Or Pick your Sign</h2>
         <div class="carousel">
-             <div class="carousel__cell"><img src="img/aries_test_v03.png" alt="Aries">  </div>
-             <div class="carousel__cell"><img src="img/taurus_v01.png" alt="Taurus"></div>
-             <div class="carousel__cell"><img src="img/gemini_v01.png" alt="Gemini"></div>
-             <div class="carousel__cell"><img src="img/cancer_v01.png" alt="Cancer"></div>
-             <div class="carousel__cell"><img src="img/leo_v01.png" alt="Leo"></div>
-             <div class="carousel__cell"><img src="img/virgo_v01.png" alt="Virgo"></div>
-             <div class="carousel__cell"><img src="img/libra_v01.png" alt="Libra"></div>
-             <div class="carousel__cell"><img src="img/scorpio_v01.png" alt="Scorpio"></div>
-             <div class="carousel__cell"><img src="img/sagittarius_v01.png" alt="Sagittarius"></div>
-             <div class="carousel__cell"><img src="img/capricorn_v01.png" alt="Capricorn"></div>
-             <div class="carousel__cell"><img src="img/aquarius_v01.png" alt="Aquarius"></div>
-             <div class="carousel__cell"><img src="img/pisces_v01.png" alt="Pisces"></div>
+             <div id="ari" class="carousel__cell"><img src="img/aries_test_v03.png" alt="Aries"></div>
+             <div id="tau" class="carousel__cell"><img src="img/taurus_v01.png" alt="Taurus"></div>
+             <div id="gem" class="carousel__cell"><img src="img/gemini_v01.png" alt="Gemini"></div>
+             <div id="can" class="carousel__cell"><img src="img/cancer_v01.png" alt="Cancer"></div>
+             <div id="leo" class="carousel__cell"><img src="img/leo_v01.png" alt="Leo"></div>
+             <div id="vir" class="carousel__cell"><img src="img/virgo_v01.png" alt="Virgo"></div>
+             <div id="lib" class="carousel__cell"><img src="img/libra_v01.png" alt="Libra"></div>
+             <div id="sco" class="carousel__cell"><img src="img/scorpio_v01.png" alt="Scorpio"></div>
+             <div id="sag" class="carousel__cell"><img src="img/sagittarius_v01.png" alt="Sagittarius"></div>
+             <div id="cap" class="carousel__cell"><img src="img/capricorn_v01.png" alt="Capricorn"></div>
+             <div id="aqu" class="carousel__cell"><img src="img/aquarius_v01.png" alt="Aquarius"></div>
+             <div id="pis" class="carousel__cell"><img src="img/pisces_v01.png" alt="Pisces"></div>
          </div>
      </div>       
 
@@ -64,21 +64,15 @@
         <h1 id="zodiac_name"></h1>
         <h2 id="zodiac_date"></h2>
         <p id="vague_fru_text"></p>
-        <h2 id="compatability"></h2>
         <h1 id="true_pairing"></h1>
-        <!-- <a href="index.html"><img id="refresh" src="img/refresh_white_192x192.png" alt="refresh"></a> -->
-        <!-- <input type="submit" value="Submit" id="submit_car"> -->
-    
-        <!-- This is the dynamically added elements -->
     </div>
 
-    <!-- <button class="restyle"><img id="refresh" src="img/refresh_white_192x192.png" alt="refresh"></button> -->
  <footer>
-     <p>copyright here, i forgot the shortcut</p>
+     <p>&copy; 2019 Brianna Buissereth</p>
  </footer>
 <div class="stars"></div>
 <div class="twinkling"></div>
-<!-- <div class="clouds"></div> -->
 </body>
 <script src="js/master.js"></script>
+<script src="js/stars.js"></script>
 </html>
